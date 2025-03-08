@@ -1,0 +1,121 @@
+/* Login Form Styling */
+.login-container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Input Group Styling */
+.input-group {
+  margin-bottom: 15px;
+  position: relative; /* Needed to position the icon inside the input */
+}
+
+.input-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Style the icons */
+.input-group label svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 20px;
+}
+
+/* Add padding-left to input fields to create space for the icon */
+.input-group input {
+  padding-left: 35px;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Link to SignUp page */
+.signup-message {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.signup-message a:hover {
+  text-decoration: underline;
+}
+
+/* User Info Section */
+.user-info {
+  text-align: center;
+}
+
+user-info button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.user-info button:hover {
+  background-color: #e53935;
+}
