@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useAuth } from "./AuthContext"; // Import authentication context
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
@@ -9,8 +9,15 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const { setUser } = useAuth(); // Get user setter function
+  const { setUser, user } = useAuth(); // Get user setter function and current user state
   const navigate = useNavigate();
+
+  // If user is already logged in, navigate to the home page
+  useEffect(() => {
+    if (user) {
+      navigate("/"); // Redirect to home page if logged in
+    }
+  }, [user, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -28,8 +35,8 @@ const Login = () => {
       });
 
       if (response.data.token) {
-        localStorage.setItem("authToken", response.data.token);
-        localStorage.setItem("user", JSON.stringify(response.data.user)); // Store full user data
+        localStorage.setItem("authToken", response.data.token);  // Store token
+        localStorage.setItem("user", JSON.stringify(response.data.user)); // Store user data
 
         setUser(response.data.user); // Update context with full user info
         navigate("/"); // Redirect to home page

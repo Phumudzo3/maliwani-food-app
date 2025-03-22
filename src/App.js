@@ -7,13 +7,13 @@ import Cart from "./components/Cart";
 import Orders from "./components/Orders";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import { AuthProvider } from "./components/AuthContext";
-import ProtectedRoute from "./components/ProtectedRoute"; // Ensure this component exists and is correctly imported
+import { AuthProvider } from "./components/AuthContext"; // Import AuthContext
+import ProtectedRoute from "./components/ProtectedRoute"; // Ensure ProtectedRoute is implemented
 
 function App() {
   return (
     <Router>
-      <AuthProvider> {/* Moved inside Router */}
+      <AuthProvider> {/* AuthProvider wraps the app to provide user context */}
         <Navbar />
         <Routes>
           {/* Public Routes */}
@@ -24,7 +24,7 @@ function App() {
           <Route
             path="/"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute> {/* Ensure the user is authenticated */}
                 <Home />
               </ProtectedRoute>
             }

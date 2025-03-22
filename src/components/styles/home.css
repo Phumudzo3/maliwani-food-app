@@ -1,112 +1,110 @@
-/* General Layout */
+/* home.css */
+
+/* Basic styling */
 .home-container {
-  text-align: center;
+  font-family: Arial, sans-serif;
   padding: 20px;
+  background-color: #f4f4f4;
+}
+/* home.css */
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  margin: 20px 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Restaurant Grid */
-.restaurant-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
+/* Food Menu Section */
+.food-menu {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.restaurant-card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.restaurant-card:hover {
-  transform: scale(1.05);
-}
-
-.restaurant-card img {
-  width: 100%;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Menu Modal */
-.menu-modal, .toppings-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
-  width: 90%;
-  z-index: 1000;
-  text-align: center;
-}
-
-.menu-items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  margin-top: 20px;
 }
 
 .food-item {
-  background: #f9f9f9;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-5px); /* Lift up effect on hover */
 }
 
 .food-item img {
   width: 100%;
-  height: 100px;
-  border-radius: 6px;
-  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 
-.food-price {
-  font-weight: bold;
-  color: #28a745;
+.food-info {
+  padding: 15px;
 }
 
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: red;
-  border: none;
-  color: white;
+.food-info h3 {
   font-size: 18px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.food-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal for food options */
+.food-options-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+}
+
+.options-container {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.option-item {
+  margin: 10px 0;
+}
+
+.submit-order {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.submit-order:hover {
+  background-color: #218838;
+}
+
+/* Styling for buttons and other elements */
+button {
+  padding: 10px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-.close-btn:hover {
-  background: darkred;
-}
-
-/* Toppings */
-.toppings-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.topping-option {
-  margin: 5px;
-  font-size: 14px;
-}
-
-.topping-option input {
-  margin-right: 5px;
+button:hover {
+  opacity: 0.8;
 }
