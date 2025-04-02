@@ -119,3 +119,37 @@
 .logout-btn svg {
   font-size: 18px;
 }
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    width: 100%;
+    padding-left: 60px;
+    gap: 0px;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .navbar a {
+    display: inline;
+    padding: 10px 0;
+  }
+
+  .user-info {
+    margin-top: 10px;
+    position:absolute;
+    top:30px;
+    left: 40px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
